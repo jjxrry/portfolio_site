@@ -13,9 +13,9 @@ function stickynavbar() {
 }
 window.addEventListener('scroll', stickynavbar);
 
-// window.onbeforeunload = function () {
-//   window.scrollTo(0, 0);
-// }
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
 
 function smoothScrollContact(){
   document.querySelector('.contact-bar').scrollIntoView({
@@ -37,7 +37,7 @@ gsap.from('.ani-bar', {
   duration: 2,
   scrollTrigger: {
     trigger: '.hero-animation',
-    toggleActions: 'play reverse play reverse',
+    toggleActions: 'play restart play reverse',
   }
 })
 
@@ -73,7 +73,7 @@ let scrollTween = gsap.to(sections, {
 
 
 gsap.to(".hero-text", {
-  yPercent: -76,
+  yPercent: -110,
   ease: "none",
   scrollTrigger: {
     trigger: ".hero-bar",
@@ -87,7 +87,7 @@ gsap.to(".hero-text", {
 gsap.to('.char', {
   y: 0,
   ease: 'power1.in',
-  delay: .7,
+  delay: .2,
   stagger: .15,
   duration: .8,
   scrollTrigger: {
