@@ -1,9 +1,3 @@
-Project to create portfolio site with flexbox CSS.
+#PORTFOLIO SITE
 
-Future Goals:
-
--Add JS
-
--Add CSS Animation Styling
-
-as of 12/30/22
+[Live Site](https://jjxrry.github.io/portfolio_site/)
