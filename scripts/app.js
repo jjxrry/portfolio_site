@@ -25,6 +25,18 @@ function smoothScrollProjects(){
   });
 }
 
+gsap.from('.ani-bar', {
+  opacity: 10,
+  x: -2000,
+  ease: 'power1.in',
+  stagger: .3,
+  duration: 2,
+  scrollTrigger: {
+    trigger: '.hero-animation',
+    toggleActions: 'play reverse play reverse',
+  }
+})
+
 const workText = new SplitType('#works')
 
 gsap.to('.char', {
@@ -45,7 +57,7 @@ gsap.to('.char', {
 gsap.registerPlugin(ScrollTrigger);
 
 let sections = gsap.utils.toArray(".panel");
-let container = document.querySelector('.project-container')
+let container = document.querySelector('.project-container');
 
 let scrollTween = gsap.to(sections, {
   xPercent: -100 * (sections.length - 1),
@@ -60,6 +72,20 @@ let scrollTween = gsap.to(sections, {
     end: `+=${container.offsetWidth}`,
   }
 });
+
+
+gsap.to(".hero-text", {
+  yPercent: -70,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".hero-bar",
+    // start: "top bottom", // the default values
+    // end: "bottom top",
+    scrub: true
+  }, 
+});
+
+
 
 
 gsap.from('.logo', {
@@ -80,43 +106,4 @@ gsap.from('#nav-bar', {
   opacity: 0,
   delay: 1.5,
   duration: 4,
-});
-
-gsap.from('.quote-whale', {
-  scrollTrigger: {
-    trigger: '.quote-whale',
-    start: 'top center',
-    markers: true,
-    toggleActions: 'play reverse play reverse'
-  },
-  x: -1000,
-  y: -300,
-  opacity: 0,
-  delay: 1,
-  rotation: 30,
-  duration: 3
-});
-
-gsap.from('.quote-container', {
-  scrollTrigger: {
-    trigger: '.quote-whale',
-    start: 'top center',
-    markers: true,
-    toggleActions: 'play reverse play reverse'
-  },
-  x: 800,
-  opacity: 0,
-  duration: 4
-});
-
-gsap.from('.author-container', {
-  scrollTrigger: {
-    trigger: '.quote-whale',
-    start: 'top center',
-    markers: true,
-    toggleActions: 'play reverse play reverse'
-  },
-  x: -800,
-  opacity: 0,
-  duration: 3
 });
