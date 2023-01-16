@@ -228,12 +228,28 @@ a   {
     z-index: 1;
 }
 
-/* .ani-text-1 {
-    top: 0;
+.ani-text-1 {
+    display: inline-block;
+    max-width: 240px;
+    font-size: 20px;
+    top: 210%;
+    left: 13%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 .ani-text-2 {
-    top: 0;
-} */
+    display: inline-block;
+    max-width: 500px;
+    font-size: 20px;
+    top: 272%;
+    right: 13%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.ani-text-3 {
+    display: inline-block;
+    font-size: 20px;
+    top: 280%;
+    right: 13%;
+}
 
 
 

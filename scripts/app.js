@@ -1,3 +1,7 @@
+const workText = new SplitType('#works')
+const aniTextOne = new SplitType('.ani-text-1', {charClass: 'cloudtxt1', wordClass: 'cloud-text-1'});
+const aniTextTwo = new SplitType('.ani-text-2', {charClass: 'cloudtxt2', wordClass: 'cloud-text-2'});
+const aniTextThree = new SplitType('.ani-text-3', {charClass: 'cloudtxt3', wordClass: 'cloud-text-3'});
 const navbar = document.querySelector('#nav-bar');
 let begin = navbar.offsetTop;
 function stickynavbar() {
@@ -37,21 +41,15 @@ gsap.from('.ani-bar', {
   }
 })
 
-const workText = new SplitType('#works')
-
-gsap.to('.char', {
-  y: 0,
-  ease: 'power1.in',
-  delay: .7,
-  stagger: .15,
-  duration: .8,
+gsap.from('.sketch', {
+  opacity: 0,
+  ease: 'power4.in',
+  duration: 5,
   scrollTrigger: {
-    trigger: '.project-container',
+    trigger: '.hero-animation',
     toggleActions: 'play reverse play reverse',
   }
 })
-
-
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -75,7 +73,7 @@ let scrollTween = gsap.to(sections, {
 
 
 gsap.to(".hero-text", {
-  yPercent: -70,
+  yPercent: -76,
   ease: "none",
   scrollTrigger: {
     trigger: ".hero-bar",
@@ -85,6 +83,53 @@ gsap.to(".hero-text", {
   }, 
 });
 
+
+gsap.to('.char', {
+  y: 0,
+  ease: 'power1.in',
+  delay: .7,
+  stagger: .15,
+  duration: .8,
+  scrollTrigger: {
+    trigger: '.project-container',
+    toggleActions: 'play reverse play reverse',
+  }
+})
+
+gsap.from('.cloud-text-1', {
+  y: 100,
+  duration: 1,
+  ease: 'slow',
+  stagger: .2,
+  // delay: .1,
+  scrollTrigger: {
+    trigger: '.animation-bar',
+    toggleActions: 'play none none none',
+  }
+})
+
+gsap.from('.cloud-text-2', {
+  x: 500,
+  duration: 1.5,
+  ease: 'slow',
+  stagger: .1,
+  // delay: .1,
+  scrollTrigger: {
+    trigger: '.animation-bar',
+    toggleActions: 'play none none none',
+  }
+})
+
+gsap.from('.cloud-text-3', {
+  opacity: 0,
+  delay: 2.5,
+  duration: 1.5,
+  ease: 'power4.in',
+  scrollTrigger: {
+    trigger: '.animation-bar',
+    toggleActions: 'play none none none',
+  }
+})
 
 
 
