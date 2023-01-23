@@ -151,6 +151,7 @@ a   {
 }
 
 .slide-1 {
+    border-radius: 7px;
     overflow: hidden;
     background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 }
@@ -161,6 +162,7 @@ a   {
 }
 
 .slide-2 {
+    border-radius: 7px;
     overflow: hidden;
     background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
 }
@@ -173,6 +175,7 @@ a   {
 }
 
 .slide-3 {
+    border-radius: 7px;
     overflow: hidden;
     background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
 }
@@ -184,8 +187,9 @@ a   {
 }
 
 .slide-4 {
+    border-radius: 7px;
     overflow: hidden;
-    background-image: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%);
+    background-image: linear-gradient(-20deg, #616161 0%, #747474 100%);
 }
 
 .slide-4-img {
@@ -197,8 +201,9 @@ a   {
 }
 
 .slide-5 {
+    border-radius: 7px;
     overflow: hidden;
-    background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+    background-image: linear-gradient(to right, #434343 0%, rgb(48, 48, 48) 100%);
 }
 
 .slide-5-img {
@@ -226,6 +231,7 @@ a   {
     padding: 0;
     position: absolute;
     z-index: 1;
+    color: rgb(255, 255, 255);
 }
 
 .ani-text-1 {
@@ -250,6 +256,8 @@ a   {
     top: 280%;
     right: 13%;
 }
+/* ANI-TEXT DO NOT WORK ON DIFFERENT BROWSERS/DEVICES */
+
 
 
 
@@ -267,45 +275,21 @@ a   {
     overflow: hidden;
 }
 
-.panel-start {
+.project-start {
     min-height: 100vh;
     min-width: 100vw;
     display: grid;
     overflow: hidden;
-    background-color: transparent;
-}
-
-.panel-one {
-    min-height: 100vh;
-    min-width: 100vw;
-    background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
-}
-
-.panel-two {
-    min-height: 100vh;
-    min-width: 100vw;
-    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-}
-
-.panel-three {
-    min-height: 100vh;
-    min-width: 100vw;
-    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
-}
-
-.panel-four {
-    min-height: 100vh;
-    min-width: 100vw;
-    background-image: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%);
+    background-image: linear-gradient(to right, #434343 0%, rgb(36, 36, 36) 100%);
 }
 
 #works {
     position: relative;
     top: 2%;
     left: 0%;
-    text-transform: uppercase;
     font-size: 28rem;
-    text-shadow: 15px 20px #4c4c4e;
+    color: #bebebe;
+    text-shadow: -8px 10px 5px #000000;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
@@ -314,7 +298,28 @@ a   {
     transition: transform .6s;
 }
 
-/* MAKE THE WORKS TEXT OVERLAP PANEL START BUT DONT STRETCH PARENT */
+.projects {
+    min-height: 120vh;
+    min-width: 100vw;
+    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.project-one {
+
+}
+
+.project-two {
+
+}
+
+.project-three {
+
+}
+
 
 
 

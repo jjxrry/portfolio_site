@@ -3,6 +3,16 @@ const aniTextOne = new SplitType('.ani-text-1', {charClass: 'cloudtxt1', wordCla
 const aniTextTwo = new SplitType('.ani-text-2', {charClass: 'cloudtxt2', wordClass: 'cloud-text-2'});
 const aniTextThree = new SplitType('.ani-text-3', {charClass: 'cloudtxt3', wordClass: 'cloud-text-3'});
 const navbar = document.querySelector('#nav-bar');
+
+gsap.registerPlugin(ScrollTrigger);
+
+// let smoother = ScrollSmoother.create({
+//   wrapper: '.top-wrapper',
+//   content: '.top-content',
+// })
+
+
+
 let begin = navbar.offsetTop;
 function stickynavbar() {
   if (window.scrollY >= begin) {    
@@ -13,9 +23,9 @@ function stickynavbar() {
 }
 window.addEventListener('scroll', stickynavbar);
 
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-}
+// window.onbeforeunload = function () {
+//   window.scrollTo(0, 0);
+// }
 
 function smoothScrollContact(){
   document.querySelector('.contact-bar').scrollIntoView({
@@ -37,14 +47,14 @@ gsap.from('.ani-bar', {
   duration: 2,
   scrollTrigger: {
     trigger: '.hero-animation',
-    toggleActions: 'play restart play reverse',
+    toggleActions: 'play reverse play reverse',
   }
 })
 
 gsap.from('.sketch', {
   opacity: 0,
   ease: 'power4.in',
-  duration: 5,
+  duration: 4,
   scrollTrigger: {
     trigger: '.hero-animation',
     toggleActions: 'play reverse play reverse',
@@ -52,24 +62,29 @@ gsap.from('.sketch', {
 })
 
 
-gsap.registerPlugin(ScrollTrigger);
 
-let sections = gsap.utils.toArray(".panel");
-let container = document.querySelector('.project-container');
-
-let scrollTween = gsap.to(sections, {
-  xPercent: -100 * (sections.length - 1),
-  ease: "none",
-  duration: 6,
+gsap.from('.logo', {
   scrollTrigger: {
-    trigger: ".project-container",
-    pin: true,
-    scrub: 1,
-    snap: 1 / (sections.length - 1),
-    // base vertical scrolling on how wide the container is so it feels more natural.
-    end: `+=${container.offsetWidth}`,
-  }
+    trigger: '.logo',
+    toggleActions: 'play reverse play reverse'
+  },
+  opacity: 0,
+  rotation: -180,
+  duration: 4,
 });
+
+gsap.from('#nav-bar', {
+  scrollTrigger: {
+    trigger: '.logo',
+    toggleActions: 'play none none none'
+  },
+  opacity: 0,
+  delay: 1.5,
+  duration: 4,
+});
+
+let sections = gsap.utils.toArray(".bar");
+let container = document.querySelector('.top-container');
 
 
 gsap.to(".hero-text", {
@@ -77,8 +92,6 @@ gsap.to(".hero-text", {
   ease: "none",
   scrollTrigger: {
     trigger: ".hero-bar",
-    // start: "top bottom", // the default values
-    // end: "bottom top",
     scrub: true
   }, 
 });
@@ -104,7 +117,7 @@ gsap.from('.cloud-text-1', {
   // delay: .1,
   scrollTrigger: {
     trigger: '.animation-bar',
-    toggleActions: 'play none none none',
+    toggleActions: 'play restart play restart',
   }
 })
 
@@ -116,7 +129,7 @@ gsap.from('.cloud-text-2', {
   // delay: .1,
   scrollTrigger: {
     trigger: '.animation-bar',
-    toggleActions: 'play none none none',
+    toggleActions: 'play restart play restart',
   }
 })
 
@@ -127,28 +140,6 @@ gsap.from('.cloud-text-3', {
   ease: 'power4.in',
   scrollTrigger: {
     trigger: '.animation-bar',
-    toggleActions: 'play none none none',
+    toggleActions: 'play restart play restart',
   }
 })
-
-
-
-gsap.from('.logo', {
-  scrollTrigger: {
-    trigger: '.logo',
-    toggleActions: 'play reverse play reverse'
-  },
-  opacity: 0,
-  rotation: -180,
-  duration: 4,
-});
-
-gsap.from('#nav-bar', {
-  scrollTrigger: {
-    trigger: '.logo',
-    toggleActions: 'play none none none'
-  },
-  opacity: 0,
-  delay: 1.5,
-  duration: 4,
-});
