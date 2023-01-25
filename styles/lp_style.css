@@ -1,11 +1,17 @@
 body    {
-    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    background-color: #3a3a3a;
     padding: 0;
     margin: 0;
     text-align: center;
     font-family: 'Raleway', sans-serif;
     overflow-x: hidden;
     overflow-y: overlay;
+}
+
+
+img {
+    max-width: 100%;
+    max-height: auto;
 }
 
 /* font-family: 'Josefin Sans', sans-serif;
@@ -49,28 +55,32 @@ font-family: 'Raleway', sans-serif; */
   /* BODY */
   
 .header {
-    background-color: transparent;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    background-color: none;
     min-height: 100vh;
     max-width: 100vw;
     margin: 0;
     padding: 0;
+    overflow: hidden;
     /* border: 2px solid white; */
   }
-  
-  /* .quote-bar,
-  .hero-bar,
-  .contact-bar,
-  .project-bar {
-  
-  } */
-  
+
+
+.header::before {    
+    content: "";
+    background-image: url(../assets/Under\ the\ Pier.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.45;
+}
+
 .logo {
-    align-self: center;
-    justify-self: center;
     color: white;
     /* border: 2px solid white; */
 }
@@ -113,15 +123,17 @@ a   {
 
 /* Title/Hero Section  */
 .hero-bar   {
-    background-color: transparent;
+    background-color: #3a3a3a;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
     max-width: 100vw;
 }
 
 .hero-text {
     display: flex;
     flex-direction: column;
+    padding-top: 10%;
     color: rgb(192, 192, 192);
     font-family: 'Playfair Display', serif;
 }
@@ -142,145 +154,19 @@ a   {
     margin-bottom: 40px;
 }
 
-.hero-animation {
-    overflow-y: hidden;
-}
-
-.ani-bar {
-    height: 93px;
-}
-
-.slide-1 {
-    border-radius: 7px;
-    overflow: hidden;
-    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-}
-
-.slide-1-img {
-    display: flex;
-    position: relative;
-}
-
-.slide-2 {
-    border-radius: 7px;
-    overflow: hidden;
-    background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
-}
-
-.slide-2-img {
-    display: inline-block;
-    position: relative;
-    left: 28%;
-    bottom: 40%;
-}
-
-.slide-3 {
-    border-radius: 7px;
-    overflow: hidden;
-    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
-}
-
-.slide-3-img {
-    display: flex;
-    position: relative;
-    left: 5%;
-}
-
-.slide-4 {
-    border-radius: 7px;
-    overflow: hidden;
-    background-image: linear-gradient(-20deg, #616161 0%, #747474 100%);
-}
-
-.slide-4-img {
-    display: inline-block;
-    position: relative;
-    height: 500px;
-    left: 28%;
-    bottom: 30%;
-}
-
-.slide-5 {
-    border-radius: 7px;
-    overflow: hidden;
-    background-image: linear-gradient(to right, #434343 0%, rgb(48, 48, 48) 100%);
-}
-
-.slide-5-img {
-    display: inline-block;
-    position: relative;
-    bottom: 30%;
-}
-
-
-/* Animation/Cinemagraph and Quote */
-
-.animation-bar {
-    min-height: 100vh;
-    max-width: 100vw;
-    object-fit: cover;
-}
-
-.cloud-vid {
-    display: flex;
-    z-index: 0;
-}
-
-.animation {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    z-index: 1;
-    color: rgb(255, 255, 255);
-}
-
-.ani-text-1 {
-    display: inline-block;
-    max-width: 240px;
-    font-size: 20px;
-    top: 210%;
-    left: 13%;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-}
-.ani-text-2 {
-    display: inline-block;
-    max-width: 500px;
-    font-size: 20px;
-    top: 272%;
-    right: 13%;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-}
-.ani-text-3 {
-    display: inline-block;
-    font-size: 20px;
-    top: 280%;
-    right: 13%;
-}
-/* ANI-TEXT DO NOT WORK ON DIFFERENT BROWSERS/DEVICES */
-
-
-
-
 /* Project Bar */
-.project-bar {
-    min-height: 100vh;
-}
-
 .project-container {
-    min-height: 100vh;
     overscroll-behavior: hidden;
-    width: 600%;
     display: flex;
-    flex-wrap: nowrap;
     overflow: hidden;
 }
 
 .project-start {
-    min-height: 100vh;
-    min-width: 100vw;
+    min-height: auto;
+    min-width: 100%;
     display: grid;
     overflow: hidden;
-    background-image: linear-gradient(to right, #434343 0%, rgb(36, 36, 36) 100%);
+    background-color: #3a3a3a;
 }
 
 #works {
@@ -299,26 +185,62 @@ a   {
 }
 
 .projects {
-    min-height: 120vh;
-    min-width: 100vw;
-    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+    background-color: #000000;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    align-items: stretch;
 }
 
-.project-one {
-
+.project {
+    margin: 0;
+    padding: 0;
+    height: 900px; 
+    width: 500px;
+    flex: 1;
+    margin-left: -10px;
+    margin-top: -51px;
 }
 
-.project-two {
-
+.middle {
+    text-align: center;
+    position: relative;
+    top: 45%;
+    left: 40%;
+    opacity: 0;
+    transition: .5s ease;
 }
 
-.project-three {
-
+.text {
+    background-color: #c0c0c0;
+    height: auto;
+    width: fit-content;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    padding: 16px 32px;
 }
+  
+.project:hover .middle {
+    opacity: 1;
+}
+
+.one:hover {
+    transform: scale(1.01);
+    transition: 1s ease;
+    opacity: 0.2;
+}
+
+.two:hover {
+    transform: scale(1.01);
+    transition: 1s ease;
+    opacity: 0.2;
+}
+
+.three:hover {
+    transform: scale(1.01);
+    transition: 1s ease;
+    opacity: 0.2;
+}
+
 
 
 
@@ -342,8 +264,8 @@ a   {
     flex-direction: row;
     justify-content: center;
     align-items: baseline;
-    gap: 10px;
-    font-family: 'Concert One', cursive;
+    font-family: 'Josefin Sans', sans-serif;
+    background-image: linear-gradient(to top, #a7a6cb 0%, #8989ba 52%, #8989ba 100%);
 }
 
 #footer-github {

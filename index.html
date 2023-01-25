@@ -13,73 +13,81 @@
     <link rel="stylesheet" href="./styles/lp_style.css">
 </head>
 <body>
-    <div class="smooth-wrapper">
-        <div class="smooth-content">
-            <div class="header slide">
-                <div id="nav-bar">
-                    <div class="links-right">
-                        <a href="javascript:;" onclick='window.scrollTo(0,0);'>Home</a>
-                        <a href="https://github.com/jjxrry">GitHub</a>
-                        <a href="https://www.linkedin.com/in/jerryyga0/">LinkedIn</a>
-                        <a href="javascript:;" onclick='smoothScrollContact()'>Contact</a>
-                        <a href="javascript:;" onclick='smoothScrollProjects()'>Projects</a>
-                    </div>
+    <div class="header slide">
+        <div id="nav-bar">
+            <div class="links-right">
+                <a href="javascript:;" onclick='window.scrollTo(0,0);'>Home</a>
+                <a href="https://github.com/jjxrry">GitHub</a>
+                <a href="https://www.linkedin.com/in/jerryyga0/">LinkedIn</a>
+                <a href="javascript:;" onclick='smoothScrollContact()'>Contact</a>
+                <a href="javascript:;" onclick='smoothScrollProjects()'>Projects</a>
+            </div>
+        </div>
+        <div class="logo">
+            <a href="./index.html"><img class="portfolio-icon" src="./assets/Portfolio Logo.png"></a>
+        </div>
+        <div class="scroll-arrow"></div>
+    </div>
+
+    <div class="hero-bar slide">
+            <div class="hero-text">
+                <h1 class="hero-intro">Hi, my name is Jerry.</h1>
+                <p class="hero-descrip">I am a front end engineer and web developer always on the lookout for the next amazing design and UI/UX inspirations.</p>
+            </div>
+    </div>
+
+    <!-- <div class="animation-bar slide">
+        <p class="animation ani-text-1">beauty can be found in the smallest and kindest moments</p>
+        <p class="animation ani-text-2">“your visions will become clear only when you can look into your own heart. who looks outside, dreams; who looks inside, awakes.”</p>
+        <p class="animation ani-text-3">-cgj</p>
+    </div> -->
+
+    <div class="project-bar slide">
+        <div class="project-container">
+            <div class="project-start">
+                <div class="project-work">
+                    <h1 id="works">WORK</h1>
                 </div>
-                <div class="logo">
-                    <a href="./index.html"><img class="portfolio-icon" src="./assets/Portfolio Logo.png"></a>
-                </div>
-                <div class="scroll-arrow"></div>
-            </div>
-    
-            <div class="hero-bar slide">
-                    <div class="hero-text">
-                        <h1 class="hero-intro">Hi, my name is Jerry.</h1>
-                        <p class="hero-descrip">I am a front end engineer and web developer always on the lookout for the next amazing design and UI/UX inspirations.</p>
-                    </div>
-                    <div class="hero-animation">
-                        <section class="ani-bar slide-1"><img class="slide-1-img sketch" src="./assets/sketch whale 1.png" alt="sketch whale"></section>
-                        <section class="ani-bar slide-2"><img class="slide-2-img sketch" src="./assets/birds.png" alt="birds"></section>
-                        <section class="ani-bar slide-3"><img class="slide-3-img sketch" src="./assets/butterfly.png" alt="butterfly"></section>
-                        <section class="ani-bar slide-4"><img class="slide-4-img sketch" src="./assets/paper plane.png" alt="paper-plane"></section>
-                        <section class="ani-bar slide-5"><img class="slide-5-img sketch" src="./assets/skull.png" alt="skull"></section>
-                    </div>
-            </div>
-    
-            <div class="animation-bar slide">
-                <p class="animation ani-text-1">beauty can be found in the smallest and kindest moments</p>
-                <p class="animation ani-text-2">“your visions will become clear only when you can look into your own heart. who looks outside, dreams; who looks inside, awakes.”</p>
-                <p class="animation ani-text-3">-cgj</p>
-                <video class="cloud-vid" src="./assets/Cloud Cinemagraph.mp4" autoplay loop></video>
-            </div>
-            </div>
-        
-            <div class="project-bar slide">
-                <div class="project-container">
-                    <div class="project-start">
-                        <div class="project-work">
-                            <h1 id="works">WORK</h1>
+                <div class="projects">
+                    <div class="project container">
+                        <div class="middle">
+                            <div class="text">Discord Bot</div>
                         </div>
-                        <div class="projects">
-                            <div class="project-one">1</div>
-                            <div class="project-two">2</div>
-                            <div class="project-three">3</div>
+                        <a href="https://github.com/jjxrry/melee_majors_discordBOT"><img class="one" src="./assets/forest topdown.jpg" alt="bnw waves" /></a>
+                    </div>
+                    <div class="project">
+                        <div class="middle">
+                            <div class="text">Sketch App</div>
                         </div>
+                        <a href="https://jjxrry.github.io/sketch_app/"><img class="two" src="./assets/mtns.jpg" alt="bnw waves" /></a>
+                    </div>
+                    <div class="project">
+                        <div class="middle">
+                            <div class="text">Calculator App</div>
+                        </div>
+                        <a href="https://jjxrry.github.io/calculator_app/"><img class="three" src="./assets/bnw fountain.jpg" alt="bnw waves" /></a>
                     </div>
                 </div>
             </div>
-    
-            <div class="contact-bar slide">
+        </div>
+    </div>
+
+    <div class="contact-bar slide">
+        <div class="button-container">
+            <div class="button-text">
+                Contact Me
             </div>
-            <div class="contact-container">
-            <!-- ANOTHER ANIMATION BUT WITH CONTACT FORM SCROLL -->
+            <div class="manual-email">
+                jerryygao@gmail.com
+            </div>
         </div>
     </div>
         
     
-    <!-- <div class="footer-line">
+    <div class="footer-line">
         <a href="https://github.com/jjxrry"><img src="./assets/github.png" id="footer-github"></a>
         <p>by Jerry G</p>
-    </div> -->
+    </div>
 
     <script src="https://unpkg.com/split-type"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>

@@ -6,12 +6,6 @@ const navbar = document.querySelector('#nav-bar');
 
 gsap.registerPlugin(ScrollTrigger);
 
-// let smoother = ScrollSmoother.create({
-//   wrapper: '.top-wrapper',
-//   content: '.top-content',
-// })
-
-
 
 let begin = navbar.offsetTop;
 function stickynavbar() {
@@ -61,8 +55,6 @@ gsap.from('.sketch', {
   }
 })
 
-
-
 gsap.from('.logo', {
   scrollTrigger: {
     trigger: '.logo',
@@ -83,12 +75,18 @@ gsap.from('#nav-bar', {
   duration: 4,
 });
 
-let sections = gsap.utils.toArray(".bar");
-let container = document.querySelector('.top-container');
 
+// gsap.to(".hero-text", {
+//   yPercent: 10,
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: ".hero-bar",
+//     scrub: true
+//   }, 
+// });
 
-gsap.to(".hero-text", {
-  yPercent: -110,
+gsap.to(".hero-bar", {
+  yPercent: -70,
   ease: "none",
   scrollTrigger: {
     trigger: ".hero-bar",
@@ -106,40 +104,5 @@ gsap.to('.char', {
   scrollTrigger: {
     trigger: '.project-container',
     toggleActions: 'play reverse play reverse',
-  }
-})
-
-gsap.from('.cloud-text-1', {
-  y: 100,
-  duration: 1,
-  ease: 'slow',
-  stagger: .2,
-  // delay: .1,
-  scrollTrigger: {
-    trigger: '.animation-bar',
-    toggleActions: 'play restart play restart',
-  }
-})
-
-gsap.from('.cloud-text-2', {
-  x: 500,
-  duration: 1.5,
-  ease: 'slow',
-  stagger: .1,
-  // delay: .1,
-  scrollTrigger: {
-    trigger: '.animation-bar',
-    toggleActions: 'play restart play restart',
-  }
-})
-
-gsap.from('.cloud-text-3', {
-  opacity: 0,
-  delay: 2.5,
-  duration: 1.5,
-  ease: 'power4.in',
-  scrollTrigger: {
-    trigger: '.animation-bar',
-    toggleActions: 'play restart play restart',
   }
 })
